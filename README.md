@@ -1,7 +1,7 @@
 # Bidsmart - Full-Funnel Amazon Advertising Platform
 
 <div align="center">
-  <img src="./src/app/assets/bidsmart-logo.png" alt="Bidsmart Logo" width="400"/>
+  <img src="https://github.com/lgk147/Bidsmart/blob/main/src/assets/dd3d780a607eac6dadc9c89baa9767e25c97c25b.png" alt="Bidsmart Logo" width="400"/>
   
   **Comprehensive Amazon Ads management platform for full-funnel advertising campaigns**
   
