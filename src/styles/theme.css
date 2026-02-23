@@ -3,46 +3,48 @@
 /* Bidsmart - Hiveminds Color Scheme */
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  --background: #F9FAFB;
+  --foreground: #111827;
   
-  /* Hiveminds Primary Colors - Blue tones from logo */
+  /* Hiveminds Primary Colors - Based on www.hiveminds.in */
   --primary: #4A6FA5;
   --primary-foreground: #ffffff;
   --primary-dark: #2C4A75;
   --primary-light: #6B8DC2;
   
-  /* Hiveminds Accent - Red from logo */
+  /* Hiveminds Accent - Orange/Red gradient */
+  --accent-orange: #FF6B35;
+  --accent-gold: #F7931E;
   --accent-red: #B4373F;
-  --accent-red-foreground: #ffffff;
+  --accent-foreground: #ffffff;
   
-  /* Hiveminds Secondary - Yellow/Gold tones */
+  /* Hiveminds Secondary */
   --secondary: #F5D547;
   --secondary-foreground: #1a1a1a;
   --secondary-dark: #E6C33C;
   
   --card: #ffffff;
-  --card-foreground: #1a1a1a;
+  --card-foreground: #111827;
   --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --muted: #f5f5f5;
-  --muted-foreground: #717182;
-  --accent: #f0f0f0;
-  --accent-foreground: #1a1a1a;
+  --popover-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #F3F4F6;
+  --accent-foreground: #111827;
   --destructive: #B4373F;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: #E5E7EB;
   --input: transparent;
-  --input-background: #f8f8f8;
-  --switch-background: #cbced4;
+  --input-background: #ffffff;
+  --switch-background: #D1D5DB;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --ring: #4A6FA5;
   
-  /* Chart colors - Amazon brand aligned */
+  /* Chart colors - Hiveminds brand palette */
   --chart-1: #4A6FA5;
-  --chart-2: #B4373F;
-  --chart-3: #F5D547;
+  --chart-2: #FF6B35;
+  --chart-3: #F7931E;
   --chart-4: #6B8DC2;
   --chart-5: #E6C33C;
   

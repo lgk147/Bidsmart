@@ -18,6 +18,8 @@ import {
 import { Button } from './ui/button';
 import { cn } from './ui/utils';
 
+const BIDSMART_LOGO = 'https://github.com/lgk147/Bidsmart/raw/main/src/app/bidsmart_trademark.png';
+
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
   { 
@@ -49,43 +51,41 @@ export default function Layout() {
   };
 
   return (
-    <div className="flex h-screen bg-[#0A0F1E]">
+    <div className="flex h-screen bg-gray-50">
       {/* Sidebar */}
       <aside
         className={cn(
-          'flex flex-col border-r border-gray-800 bg-[#0F1624] transition-all duration-300',
+          'flex flex-col border-r border-gray-200 bg-white transition-all duration-300 shadow-sm',
           sidebarOpen ? 'w-64' : 'w-20'
         )}
       >
         {/* Logo */}
-        <div className="flex h-16 items-center justify-between border-b border-gray-800 px-4">
+        <div className="flex h-16 items-center justify-between border-b border-gray-200 px-4 bg-white">
           {sidebarOpen ? (
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#FF6B35] to-[#F7931E]">
-                <span className="text-lg font-bold text-white">B</span>
-              </div>
-              <div>
-                <h1 className="text-lg font-bold text-white">Bidsmart</h1>
-                <p className="text-[10px] text-gray-400">by Hiveminds</p>
-              </div>
-            </div>
+            <img 
+              src={BIDSMART_LOGO} 
+              alt="Bidsmart Logo" 
+              className="h-12 w-auto object-contain"
+            />
           ) : (
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#FF6B35] to-[#F7931E]">
-              <span className="text-lg font-bold text-white">B</span>
-            </div>
+            <img 
+              src={BIDSMART_LOGO} 
+              alt="Bidsmart" 
+              className="h-10 w-10 object-contain"
+            />
           )}
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="text-gray-400 hover:text-white"
+            className="text-gray-600 hover:text-gray-900 hover:bg-gray-100"
           >
             {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-1 overflow-y-auto p-3">
+        <nav className="flex-1 space-y-1 overflow-y-auto p-3 bg-white">
           {navigation.map((item) => {
             const isActive = item.href ? location.pathname === item.href : false;
             const hasChildren = 'children' in item && item.children;
@@ -99,7 +99,7 @@ export default function Layout() {
                       onClick={() => toggleExpanded(item.name)}
                       className={cn(
                         'flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
-                        'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        'text-gray-700 hover:bg-blue-50 hover:text-[#4A6FA5]'
                       )}
                     >
                       <div className="flex items-center gap-3">
@@ -117,7 +117,7 @@ export default function Layout() {
                       )}
                     </button>
                     {isExpanded && sidebarOpen && (
-                      <div className="ml-4 mt-1 space-y-1 border-l border-gray-800 pl-3">
+                      <div className="ml-4 mt-1 space-y-1 border-l border-gray-200 pl-3">
                         {item.children.map((child) => {
                           const isChildActive = location.pathname === child.href;
                           return (
@@ -127,8 +127,8 @@ export default function Layout() {
                               className={cn(
                                 'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                                 isChildActive
-                                  ? 'bg-gradient-to-r from-[#FF6B35] to-[#F7931E] text-white'
-                                  : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                                  ? 'bg-gradient-to-r from-[#4A6FA5] to-[#6B8DC2] text-white shadow-sm'
+                                  : 'text-gray-600 hover:bg-blue-50 hover:text-[#4A6FA5]'
                               )}
                             >
                               <child.icon size={18} />
@@ -145,8 +145,8 @@ export default function Layout() {
                     className={cn(
                       'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
                       isActive
-                        ? 'bg-gradient-to-r from-[#FF6B35] to-[#F7931E] text-white'
-                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        ? 'bg-gradient-to-r from-[#4A6FA5] to-[#6B8DC2] text-white shadow-sm'
+                        : 'text-gray-700 hover:bg-blue-50 hover:text-[#4A6FA5]'
                     )}
                   >
                     <item.icon size={20} />
@@ -159,20 +159,20 @@ export default function Layout() {
         </nav>
 
         {/* User Profile */}
-        <div className="border-t border-gray-800 p-3">
+        <div className="border-t border-gray-200 p-3 bg-white">
           <div
             className={cn(
-              'flex items-center gap-3 rounded-lg bg-gray-800 p-3',
+              'flex items-center gap-3 rounded-lg bg-gradient-to-br from-[#4A6FA5] to-[#6B8DC2] p-3 shadow-sm',
               !sidebarOpen && 'justify-center'
             )}
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#FF6B35] to-[#F7931E] text-sm font-semibold text-white">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-semibold text-[#4A6FA5]">
               A
             </div>
             {sidebarOpen && (
               <div className="flex-1 overflow-hidden">
                 <p className="truncate text-sm font-medium text-white">Admin User</p>
-                <p className="truncate text-xs text-gray-400">admin@bidsmart.io</p>
+                <p className="truncate text-xs text-blue-100">admin@bidsmart.io</p>
               </div>
             )}
           </div>
@@ -180,7 +180,7 @@ export default function Layout() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-auto bg-gray-50">
         <Outlet />
       </main>
     </div>
