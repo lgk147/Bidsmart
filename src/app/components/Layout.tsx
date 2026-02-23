@@ -17,7 +17,8 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from './ui/utils';
-import bidsmartLogo from 'figma:asset/dd3d780a607eac6dadc9c89baa9767e25c97c25b.png';
+
+const BIDSMART_LOGO = 'https://raw.githubusercontent.com/lgk147/Bidsmart/main/src/assets/dd3d780a607eac6dadc9c89baa9767e25c97c25b.png';
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
@@ -62,13 +63,13 @@ export default function Layout() {
         <div className="flex h-16 items-center justify-between border-b border-gray-200 px-4 bg-white">
           {sidebarOpen ? (
             <img 
-              src={bidsmartLogo} 
+              src={BIDSMART_LOGO} 
               alt="Bidsmart Logo" 
               className="h-12 w-auto object-contain"
             />
           ) : (
             <img 
-              src={bidsmartLogo} 
+              src={BIDSMART_LOGO} 
               alt="Bidsmart" 
               className="h-10 w-10 object-contain"
             />
